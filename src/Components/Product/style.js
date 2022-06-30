@@ -10,7 +10,8 @@ color: var(--brown);
 border: 2px solid var(--brown);
 padding: 1rem;
 border-radius: 1rem;
-height: 500px;
+height: 450px;
+
 
 @media (min-width: 1024px) {
     width: 350px;

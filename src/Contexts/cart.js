@@ -4,7 +4,16 @@ import { createContext } from "react";
 export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-  const [cartList, setCartList] = useState([]);
+  const localCart = localStorage.getItem("@CART/ADD");
+  const initialState = () => {
+    if (localCart) {
+      return JSON.parse(localCart);
+    } else {
+      return [];
+    }
+  };
+
+  const [cartList, setCartList] = useState(initialState());
 
   const addToCart = (product) => {
     const selectedProduct = cartList?.find(({ id }) => id === product.id);
@@ -52,5 +61,3 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-
-

@@ -5,13 +5,7 @@ export const MainContainer = styled.main`
   flex-direction: column;
   gap: 1rem;
 
-  h2 {
-    text-align: center;
-    color: var(--brown);
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
+
 `;
 
 export const SectionContainer = styled.section``;
@@ -28,8 +22,8 @@ export const ListContainer = styled.ul`
   border-radius: 1rem;
   
   img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 
